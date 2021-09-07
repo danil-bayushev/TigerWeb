@@ -41,11 +41,81 @@
     }
 
     &__images_block{
-        outline: 1px solid red;
-
         width: 51%;
         display: flex;
         justify-content: space-between;
+
+        .tumbs{
+            ul{
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                li{
+                    width: 80px;
+                    height: 80px;
+                    background-color: rgba(255,236,0,0.0);
+                    border: 2px solid #ededed;
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img{
+                        opacity: 0.7;
+                    }
+
+                    &:hover{
+                        border: 2px solid #ffec00;
+                    }
+
+                    &.active{
+                        border: 2px solid #ffec00;
+                        position: relative;
+
+                        img{
+                            opacity: 1;
+                        }
+
+                        &::after{
+                            content: "";
+                            width: 6px;
+                            height: 20px;
+                            background: url(../../ico/tirangle_yellow_white.png);
+                            position: absolute;
+                            left: 80px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .main_image{
+            width: 500px;
+            height: 500px;
+            background-color: #ffffff;
+            border: 3px solid #ededed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .zoom{
+                width: 40px;
+                height: 40px;
+                border: 2px solid #ededed;
+                border-radius: 100%;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                font-size: 20px;
+                line-height: 16px;
+                font-weight: 400;
+            }
+        }
     }
 
     &__info_block{
@@ -199,8 +269,6 @@
                     line-height: 16px;
                     font-weight: 700;
                     text-transform: uppercase;
-                    // padding: 13px 0;
-                    // text-align: center;
                     box-sizing: border-box;
                     display: flex;
                     justify-content: center;
@@ -249,7 +317,6 @@
                     font-size: 12px;
                     font-weight: 700;
                     line-height: 16px;
-                    font-weight: 400;
                     text-transform: uppercase;
                     margin-left: 22px;
 
@@ -257,10 +324,39 @@
                         font-size: 20px;
                         margin-right: 10px;
                     }
+
+                    &:hover{
+                        cursor: pointer;
+                        i{
+                            color: $main-color;
+                        }
+                    }
                 }
 
             }
             
+            
+        }
+
+        .description_block{
+            p{
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+                color: #6e6e6e;
+                margin-bottom: 15px;
+
+                a{
+                    font-weight: 700;
+                    border-bottom: 1px dotted;
+                }
+                strong{
+                    font-weight: 700;
+                }
+                &:last-child{
+                    color: #000000;
+                }
+            }
             
         }
     }
