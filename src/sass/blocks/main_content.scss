@@ -1,0 +1,267 @@
+@import '../reset.scss';
+@import '../base/variables';
+
+.product_card{
+
+    &__header{
+        height: 136px;
+        background: url(../../img/body_header_bg.jpg) center no-repeat;
+        
+
+        .container{
+            height: inherit;
+            padding: 29px 0;
+            box-sizing: border-box;
+        }
+
+        .title{
+            font-size: 30px;
+            line-height: 16px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .subtitle{
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            margin-top: 25px;
+        }
+    }
+
+    &__body{
+        height: 530px;
+        padding-top: 30px;
+
+        .container{
+            height: inherit;
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+
+    &__images_block{
+        outline: 1px solid red;
+
+        width: 51%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info_block{
+        box-sizing: border-box;
+        width: 49%;
+        padding-left: 30px;
+
+        .title_block{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #ededed;
+            padding-bottom: 26px;
+
+            .product_existence{
+                display: flex;
+                justify-content: flex-start;
+                font-size: 12px;
+                line-height: 16px;
+                font-weight: 400;
+                color: #6e6e6e;
+                
+                .mark{
+                    width: 18px;
+                    height: 18px;
+                    background: url(../../ico/checkmark.png);
+                    margin-right: 7px;
+                }
+            }
+
+            .product_title{
+                margin-top: 10px;
+                font-size: 18px;
+                line-height: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .lables{
+                display: flex;
+                justify-content: flex-start;
+
+                .new_lable, .hit_lable{
+                    width: 43px;
+                    height: 50px;
+                    font-size: 12px;
+                    line-height: 16px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .new_lable{
+                    background: url(../../ico/hexagon_black.png);
+                    color: #ffffff;
+                }
+                .hit_lable{
+                    background: url(../../ico/hexagon_yellow.png);
+                    color: #000000;
+                    margin-left: 5px;
+                }
+            }
+            
+        }
+
+        .rating_block{
+            min-height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ededed;;
+
+            .stars{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                ul{
+                    display: flex;
+                    justify-content: flex-start;
+                    li{
+                        display: block;
+                        width: 18px;
+                        height: 17px;
+                        background: url(../../ico/star_empty.png) no-repeat;
+                        margin-right: 2px;  
+
+                        &:hover{
+                            background: url(../../ico/star_yellow.png) no-repeat;
+                        }
+                    }
+                }
+            }
+
+            .voices{
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: #cccccc;
+                margin-left: 10px;
+            }
+
+
+
+            .callback{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 16px;
+                text-transform: uppercase;
+
+                .fa-commenting-o{
+                    margin-right: 7px;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+
+                div{
+                    border-bottom: 1px dotted;
+
+                    &:hover{
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+        }
+
+        .price_block{
+            min-height: 105px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .price_form{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                .price{
+                    width: 220px;
+                    height: 46px;
+                    background-color: rgba(0,0,0,0.0);
+                    border: 3px solid #ffec00;
+                    font-size: 20px;
+                    line-height: 16px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    // padding: 13px 0;
+                    // text-align: center;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .basket{
+                    position: relative;
+                    width: 60px;
+                    height: 46px;
+                    background-color: $main-color;
+                    font-size: 18px;
+                    line-height: 16px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        background: url(../../ico/triangle_white.png);
+                        width: 6px;
+                        height: 20px;
+                        left: -3px;
+                    }
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .actions{
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 2px;
+
+                .favourites, .compare{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    font-family: Arial;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 16px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin-left: 22px;
+
+                    i{
+                        font-size: 20px;
+                        margin-right: 10px;
+                    }
+                }
+
+            }
+            
+            
+        }
+    }
+}
