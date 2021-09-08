@@ -90,14 +90,15 @@
         }
 
         .main_image{
-            width: 500px;
-            height: 500px;
-            background-color: #ffffff;
-            border: 3px solid #ededed;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: #ffffff;
+            border: 3px solid #ededed;
+            
 
             .zoom{
                 width: 40px;
