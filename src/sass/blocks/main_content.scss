@@ -4,13 +4,12 @@
 .product_card{
 
     &__header{
-        height: 136px;
-        background: url(../../img/body_header_bg.jpg) center no-repeat;
+        background: url(../../img/body_header_bg.jpg) center (center / cover) no-repeat;
         
 
-        .container{
+        .wrapper{
             height: inherit;
-            padding-top: 29px;
+            padding: 29px 0;
             box-sizing: border-box;
         }
 
@@ -361,6 +360,26 @@
                 }
                 &:last-child{
                     color: #000000;
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .product_card{
+        
+        &__header{
+            .container{
+                .wrapper{
+                    .title{
+                        font-size: 24px;
+                        text-align: center;
+                    }
+                    .subtitle{
+                        text-align: justify;
+                    }
                 }
             }
             
