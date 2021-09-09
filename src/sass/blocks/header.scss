@@ -310,28 +310,7 @@
 }
 
 
-@media(max-width: 1184px){
-    body{
-        .product_card__info_block{
-            .price_block{
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                padding-top: 30px;
 
-                .actions{
-                    margin-top: 15px;
-
-                    .favourites{
-                        margin-left: 0;
-                    }
-                }
-            }
-        }
-    }
-    
-    
-}
 
 @media (max-width: 1084px){
     .basket_sum{
@@ -380,7 +359,6 @@
             flex-wrap: wrap;
             .catalog{
                 font-size: 14px;
-                margin-right: 30px;
                 width: 100px;
 
                 .fa-caret-down{
