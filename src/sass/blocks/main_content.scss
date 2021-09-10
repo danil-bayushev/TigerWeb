@@ -60,11 +60,14 @@
                     align-items: center;
 
                     img{
+                        max-width: 80px;
+                        max-height: 80px;
                         opacity: 0.7;
                     }
 
                     &:hover{
                         border: 2px solid #ffec00;
+                        cursor: pointer;
                     }
 
                     &.active{
@@ -91,6 +94,7 @@
         .main_image{
             width: 100%;
             max-width: 500px;
+            
             background-color: #ffffff;
             border: 3px solid #ededed;
             display: flex;
@@ -101,6 +105,7 @@
 
             img{
                 max-width: 100%;
+                max-height: 100%;
             }
 
             .zoom{

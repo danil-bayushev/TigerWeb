@@ -24,9 +24,8 @@ header{
             position: relative;
             .main_wrapper{
                 position: absolute;
-                top: -47px;
+                top: -49px;
                 z-index: 5;
-                padding: 0 10px;
             }
             
             
@@ -163,6 +162,18 @@ header{
         
     }
 }
+@media (max-width:1204px){
+    header{ 
+        .catalog_open{
+            .container{
+                .main_wrapper {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width:1184px){/*костыль =( */
     body{
         .background{
