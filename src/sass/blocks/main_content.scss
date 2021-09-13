@@ -407,6 +407,16 @@
                         justify-content: space-between;
                         flex-direction: row;
                         flex-wrap: wrap;
+                        li{
+                            &.active{
+                                &:after{
+                                    left: 50%;
+                                    top: -19px;
+                                    transform: rotate(-90deg) translate(-50%, 0);
+                                    
+                                }
+                            }
+                        }
                     }
                 }
     

@@ -10,6 +10,71 @@
 </head>
 <body>
     <div class="background"></div>
+    <div class="fixed_menu">
+        <div class="container">
+            <nav class="fixed_menu__main_menu">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li class="catalog">
+                        <a href="#">Каталог</a>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </li>
+                    <li><a href="#">О компании</a></li>
+                    
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Акции %</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <i class="fa fa-bars kebab_menu" aria-hidden="true"></i>
+            </nav>
+            <div class="fixed_menu__basket_block">
+                <div class="favourites">
+                    <a href="#">
+                        <div>
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="circle">0</div>
+                    </a>
+                    
+                </div>
+                <div class="compare">
+                    <a href="#">
+                        <div>
+                            <i class="fa fa-files-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="circle">0</div>
+                    </a>
+                    
+                </div>
+                <div class="basket">
+                    <a href="#">
+                        <div>
+                            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                        </div>
+                        <div class="circle">2</div>
+                    </a>
+                    
+                    <div class="basket_sum">На сумму - <span>23 140</span> руб.</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="vertical_menu">
+        <nav class="vertical_menu__main_menu">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Гарантия</a></li>
+                <li><a href="#">Акции %</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
     <header>
         
         <div class="top_line">
@@ -24,7 +89,7 @@
                         <li><a href="#">Акции %</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
-                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <i class="fa fa-bars kebab_menu" aria-hidden="true"></i>
                 </nav>
                 <div class="top_line__auth_block">
                     <ul>
@@ -142,18 +207,22 @@
                         </div>
                     
                     
-                        <div class="home active">
-                            <span>Home & Garden / Бытовая техника</span>
+                        <div class="tab active">
+                            Home & Garden / Бытовая техника
+                            <span></span>
                         </div>
                     
                     
-                        <div class="professional">
-                            <span>Professional / Профессиональная техника</span>
+                        <div class="tab">
+                            Professional / Профессиональная техника
+                            <span></span>
                         </div>
                     </div>
                 
                     <div class="catalog_open__wrapper">
-                        <ul class="product_sections">
+                        <div class="section home active">
+                            <h2>//* Home *//</h2>
+                            <ul class="product_sections">
                             <li>
                                 <a href="#">
                                     <img src="img/catalog/avd.jpg" alt="section_image">
@@ -241,6 +310,99 @@
                                 </a>
                             </li>
                         </ul>
+                        </div>
+                        <div class="section prof ">
+                            <h2>//* Professional *//</h2>
+                            <ul class="product_sections">
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/avd.jpg" alt="section_image">
+                                    <div class="section_title">Аппараты высокого давления</div>
+                                </a>
+                        </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/p.jpg" alt="section_image">
+                                    <div class="section_title">Пылесосы</div>
+                                </a>
+                        </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/spio.jpg" alt="section_image">
+                                    <div class="section_title">Системы полива и орошения</div>
+                                </a>
+                        </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/rpm.jpg" alt="section_image">
+                                    <div class="section_title">Ручные подметальные машины</div>
+                                </a>
+                        </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/n.jpg" alt="section_image">
+                                    <div class="section_title">Насосы</div>
+                                </a>
+                        </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/el.jpg" alt="section_image">
+                                    <div class="section_title">Электровеники</div>
+                                </a>
+                        </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/par.jpg" alt="section_image">
+                                    <div class="section_title">Пароочистители</div>
+                                </a>
+                        </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/gs.jpg" alt="section_image">
+                                    <div class="section_title">Гладильные системы</div>
+                                </a>
+                        </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/pp.jpg" alt="section_image">
+                                    <div class="section_title">Паропылесосы</div>
+                                </a>
+                        </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/st_o.jpg" alt="section_image">
+                                    <div class="section_title">Стеклоочиститель</div>
+                                </a>
+                        </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/pol.jpg" alt="section_image">
+                                    <div class="section_title">Полотер</div>
+                                </a>
+                        </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/pol_m.jpg" alt="section_image">
+                                    <div class="section_title">Поломоечная машина</div>
+                                </a>
+                        </li>
+                        </ul>
+                        <ul class="dop_sections">
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/prin.jpg" alt="Принадлежности">
+                                    <div class="section_title">Принадлежности</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/catalog/d4iu.jpg" alt="Чистка и уход">
+                                    <div class="section_title">Для чистки и ухода</div>
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+                        
                     </div>
                 </div>
 

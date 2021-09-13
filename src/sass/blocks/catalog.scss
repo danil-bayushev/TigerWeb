@@ -13,15 +13,18 @@ body{
         position: absolute;
         z-index: 3;
     }
+    .container{
+        position: relative;
+    }
 }
 
-header{
+body{
     
     .catalog_open{
          display: none;
         .container{
             padding: 0;
-            position: relative;
+           position: relative;
             .main_wrapper{
                 position: absolute;
                 top: -49px;
@@ -48,14 +51,11 @@ header{
                 text-transform: uppercase;
                 border: none;
 
-                &.home, &.professional{
+                &.tab{
                     font-size: 14px;
                 }
 
-                span{
-                    line-height: 1;
-                    text-align: center;
-                }
+                
     
                 &:hover{
                     cursor: pointer;
@@ -103,6 +103,18 @@ header{
             width: 100%;
             background-color: #fff;
             padding-top: 10px;
+            overflow: hidden;
+            display: flex;
+            
+            .section{
+                width: 100%;
+                display: none;
+            }
+            
+            .active{
+                display: block;
+            }
+
 
             .product_sections, .dop_sections{
                 display: flex;
