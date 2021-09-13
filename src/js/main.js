@@ -21,11 +21,12 @@ window.onload = function() {
     const kebabMenuBtn = $.gE_s('.kebab_menu');
     const tabs = $.gE_s('.tab');
     const rating = $.gE_s('.stars ul li');
+    const productCards = $.gE_s('.product_sections li a');
 
-
+console.log(productCards);
     
     changeCirclesBg(); //Изменение фона круга (избранное, сравнение, корзина) при наличии в нем цифры, отличной от нуля
-
+    
 
    // Events -------------------------------------------------------------
 
