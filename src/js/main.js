@@ -20,18 +20,23 @@ window.onload = function() {
     const verticalMenu = $.gE('.vertical_menu');
     const kebabMenuBtn = $.gE_s('.kebab_menu');
     const tabs = $.gE_s('.tab');
+    const rating = $.gE_s('.stars ul li');
 
 
     
-    changeCirclesBg();
+    changeCirclesBg(); //Изменение фона круга (избранное, сравнение, корзина) при наличии в нем цифры, отличной от нуля
 
-   console.log(catalogSections);
+
+   // Events -------------------------------------------------------------
 
     catalogBtns.forEach((el) => {
         el.addEventListener('click', openCatalog);
     });
+
     openCatalogBtn.addEventListener('click', closeAll);
+
     background.addEventListener('click', closeAll);
+
     productsTumbs.forEach((el) => {
         el.addEventListener('click', changeImg);
     });
@@ -43,14 +48,40 @@ window.onload = function() {
     
     tabs.forEach((el) => {
         el.addEventListener('click', selectTab);
-    })
+    });
 
+    rating.forEach((el) => {
+        el.addEventListener('mouseover', setRating);
+    });
+    rating.forEach((el) => {
+        el.addEventListener('mouseout', clearRating);
+    });
+
+    function setRating(e){
+        console.log(e.target);
+        rating.forEach(el => {
+            el.style.background = "url(../../ico/star_empty.png) no-repeat";
+        });
+        let index = (Array.from(rating).indexOf(e.target));
+        for(let i in rating){
+            if(i<=index){
+                rating[i].style.background = "url(../../ico/star_yellow.png) no-repeat";
+            }
+        }
+    };
+
+    function clearRating(){
+        rating.forEach(el => {
+            el.style.background = "url(../../ico/star_empty.png) no-repeat";
+        });
+    };
 
 
 
 // Functions -------------------------------------------------------------
 
-    function openCatalog(){
+    function openCatalog(e){
+        e.preventDefault();
         if(!catalog_opened){
             $.gE('.catalog_open').style.display = 'block';
             background.style.display = 'block';
@@ -98,7 +129,6 @@ window.onload = function() {
     }
 
     function showFixedMenu(){
-        console.log(window.scrollY);
         if(window.scrollY > 38){
             fixedMenu.style.display = 'block';
         }else if(window.scrollY < 38){
@@ -124,6 +154,13 @@ window.onload = function() {
             }
         });
         e.target.classList.add('active');
+        let activeIndex = (Array.from(tabs).indexOf(e.target));
+        catalogSections.forEach(el => {
+            if(el.classList.contains('active')){
+                el.classList.remove('active'); 
+             }
+        });
+        catalogSections[activeIndex].classList.add('active');
     }
 
 };
