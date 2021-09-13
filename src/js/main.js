@@ -8,27 +8,27 @@ const $ = {
 }
 
 window.onload = function() {
-    let catalog_opened = false;
-    const background = $.gE('.background');
-    const catalogBtns = $.gE_s('.catalog');
-    const openCatalogBtn = $.gE('.catalog_open .catalog');
-    const catalogSections = $.gE_s('.catalog_open__wrapper .section');
-    const productsTumbs = $.gE_s('.tumbs>ul>li');
-    const productsMainImg = $.gE('.main_image>img');
-    const fixedMenu = $.gE('.fixed_menu');
-    let vertical_Menu_opened = false;
-    const verticalMenu = $.gE('.vertical_menu');
-    const kebabMenuBtn = $.gE_s('.kebab_menu');
-    const tabs = $.gE_s('.tab');
-    const rating = $.gE_s('.stars ul li');
-    const productCards = $.gE_s('.product_sections li a');
+    let catalog_opened = false; //Флаг открытия каталога
+    const background = $.gE('.background'); //Фон при открытом каталоге и боковом меню
+    const catalogBtns = $.gE_s('.catalog'); // Кнопки открытия каталога
+    const openCatalogBtn = $.gE('.catalog_open .catalog'); //Кнопка открытого каталога
+    const catalogSections = $.gE_s('.catalog_open__wrapper .section'); //Вкладки каталога
+    const productsTumbs = $.gE_s('.tumbs>ul>li'); //Тумбы слайдера
+    const productsMainImg = $.gE('.main_image>img'); //Главное изображение слайдера
+    const fixedMenu = $.gE('.fixed_menu'); //Фиксированное меню
+    let vertical_Menu_opened = false; //Флаг открытия вертикального меню
+    const verticalMenu = $.gE('.vertical_menu'); //Вертикальное меню
+    const kebabMenuBtn = $.gE_s('.kebab_menu'); //Кнопки кебаб-меню
+    const tabs = $.gE_s('.tab'); //Табы каталога
+    const rating = $.gE_s('.stars ul li'); //Оценка товара
+    const productCards = $.gE_s('.product_sections li a'); //Карточки разделов каталога
 
-console.log(productCards);
+
     
     changeCirclesBg(); //Изменение фона круга (избранное, сравнение, корзина) при наличии в нем цифры, отличной от нуля
     
 
-   // Events -------------------------------------------------------------
+    // Events -------------------------------------------------------------
 
     catalogBtns.forEach((el) => {
         el.addEventListener('click', openCatalog);
@@ -57,29 +57,15 @@ console.log(productCards);
     rating.forEach((el) => {
         el.addEventListener('mouseout', clearRating);
     });
+    productCards.forEach(el => {
+        el.addEventListener('click', preventDefault);
+    });
 
-    function setRating(e){
-        console.log(e.target);
-        rating.forEach(el => {
-            el.style.background = "url(../../ico/star_empty.png) no-repeat";
-        });
-        let index = (Array.from(rating).indexOf(e.target));
-        for(let i in rating){
-            if(i<=index){
-                rating[i].style.background = "url(../../ico/star_yellow.png) no-repeat";
-            }
-        }
-    };
-
-    function clearRating(){
-        rating.forEach(el => {
-            el.style.background = "url(../../ico/star_empty.png) no-repeat";
-        });
-    };
+    
 
 
 
-// Functions -------------------------------------------------------------
+    // Functions -------------------------------------------------------------
 
     function openCatalog(e){
         e.preventDefault();
@@ -162,6 +148,27 @@ console.log(productCards);
              }
         });
         catalogSections[activeIndex].classList.add('active');
+    }
+    function setRating(e){
+        rating.forEach(el => {
+            el.style.background = "url(../../ico/star_empty.png) no-repeat";
+        });
+        let index = (Array.from(rating).indexOf(e.target));
+        for(let i in rating){
+            if(i<=index){
+                rating[i].style.background = "url(../../ico/star_yellow.png) no-repeat";
+            }
+        }
+    };
+
+    function clearRating(){
+        rating.forEach(el => {
+            el.style.background = "url(../../ico/star_empty.png) no-repeat";
+        });
+    };
+
+    function preventDefault(e){
+        e.preventDefault();
     }
 
 };

@@ -340,7 +340,6 @@
             font-weight: 700;
             text-transform: uppercase;
             border: none;
-            padding-top: 4px;
             box-sizing: border-box;
 
             &:hover{
@@ -543,7 +542,7 @@
         .container{
             flex-wrap: wrap;
             .catalog{
-                font-size: 14px;
+                font-size: 12px;
                 width: 100px;
 
                 .fa-caret-down{

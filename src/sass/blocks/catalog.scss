@@ -93,7 +93,7 @@ body{
                 // width: 140px;
                 background-color: $main-color;
                 i{
-                    margin-left: 8px;
+                    margin-left: 2px;
                     font-size: 18px;
                     font-weight: 400;
                 }
@@ -138,7 +138,7 @@ body{
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        // overflow: hidden;
+                        overflow: hidden;
 
                         img{
                             max-width: 100%;
@@ -275,11 +275,9 @@ body{
                 >div{
                     font-size: 12px;
                     padding: 0 10px;
-                    &.home, &.professional{
-                        font-size: 12px;
-                    }
+                    
                     &.tab{
-                        font-size: 12px;
+                        font-size: 11px;
                     }
                 }
             }
